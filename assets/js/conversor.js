@@ -28,8 +28,8 @@
     var valor     = document.getElementById('convert').value,
         elemento  = document.getElementById('converted'),
         /* Extienda la RegeExp a la especificación. use una XRegExp */
-        regexp    = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([a-z,A-Z]+)\s*$/i,
-        valor     = valor.match(regexp);
+        regexp    = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([a-z,A-Z]+)\s*$/i;
+    valor     = valor.match(regexp);
     
     if (valor) {
       var numero = valor[1],
@@ -54,6 +54,5 @@
     }
     else
       elemento.innerHTML = "";
-  }
-  
+  };
 })(this);
