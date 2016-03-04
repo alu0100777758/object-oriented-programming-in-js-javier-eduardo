@@ -6,10 +6,10 @@
   {
     var _valor;
     var _tipo;
-    valortipo = XRegExp('(?<valor>  [0-9]+ ) -?  # valor  \n' +
+    var valortipo = XRegExp('(?<valor>  [0-9]+ ) -?  # valor  \n' +
                '(?<tipo> [a-z]+ ) -?  # tipo  ', 'ix');
     if(isNaN(valor)){
-    valmatch = XRegExp.exec(valor, valortipo);
+    var valmatch = XRegExp.exec(valor, valortipo);
     _valor = valmatch.valor;
     _tipo = valmatch.tipo;
     }
@@ -21,7 +21,7 @@
 
   function Temperatura(valor,tipo)
   {
-    Medida.call(this, numberOfCylinder, carType)
+    Medida.call(this, valor, tipo)
   }
 
   function Celsius(valor)
